@@ -1,4 +1,8 @@
 1. ls -l ./bin/ 
 2. ls -l ./tmp/ 
 3. ls -a ./etc/ | grep ^t | sort -rn
+4. ls ./dev/ | grep ^tty..$             
+    ls -l /dev/tty??
+
+
 
