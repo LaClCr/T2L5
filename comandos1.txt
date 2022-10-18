@@ -4,6 +4,7 @@
 4. ls ./dev/ | grep ^tty..$             
     ls -l /dev/tty??
 5. ls ./dev/ | grep ^tty.*[1-4]$
+6. ls ./dev/ | grep ^t.*C1$
 
 
 
