@@ -3,9 +3,10 @@
 3. ls -a ./etc/ | grep ^t | sort -rn
 4. ls ./dev/ | grep ^tty..$             
     ls -l /dev/tty??
-5. ls ./dev/ | grep ^tty.*[1-4]$
-6. ls ./dev/ | grep ^t.*C1$
+5. ls ./dev/ | grep ^tty*[1-4]$
+6. ls ./dev/ | grep ^t*C1$
 7. ls -a ../../
+8. ls -a ../../etc/ | grep -v ^t
 
 
 
