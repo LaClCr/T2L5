@@ -1,3 +1,3 @@
 1. cat el_quijote.txt | grep -ic quijote
 2. cat el_quijote.txt | grep -vic quijote
-3. cat el_quijote.txt | grep -oi quijote | wc -w
+3. grep -roi quijote | wc -w
