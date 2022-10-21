@@ -6,3 +6,4 @@
 6. cat el_quijote.txt | sed 's/panza/barriga/gi'
 7. cat el_quijote.txt | head -c4
 8. cat el_quijote.txt | head -c4000
+9. cat -n el_quijote.txt | tail -n+14 | head -n12
