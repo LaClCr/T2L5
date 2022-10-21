@@ -11,8 +11,6 @@
 
 
 
-
-
 10. cd ../../tmp/
 11. pwd
 12. date
@@ -25,3 +23,18 @@
 18. cp ./../../../etc/hostname mensaje.txt 
 19. cp mensaje.txt dir1 | cp mensaje.txt dir2 | cp mensaje.txt dir3
 20. ls -R
+
+
+
+
+1. cat el_quijote.txt | grep -ic quijote
+2. cat el_quijote.txt | grep -vic quijote
+3. grep -isrc quijote 
+4. grep -isrc quijote | grep -v :0$
+5. cat el_quijote.txt | sed 's/panza/barriga/g' 
+6. cat el_quijote.txt | sed 's/panza/barriga/gi'
+7. cat el_quijote.txt | head -c4
+8. cat el_quijote.txt | head -c4000
+9. cat -n el_quijote.txt | tail -n+14 | head -n12
+10. sort -fr el_quijote.txt
+11. git switch master - git merge quijote
