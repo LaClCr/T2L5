@@ -1,3 +1,4 @@
 1. cat el_quijote.txt | grep -ic quijote
 2. cat el_quijote.txt | grep -vic quijote
 3. grep -isrc quijote 
+4. grep -isrc quijote | grep -v :0$
