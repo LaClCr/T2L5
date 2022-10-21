@@ -1,1 +1,2 @@
 1. cat el_quijote.txt | grep -ic quijote
+2. cat el_quijote.txt | grep -vic quijote
