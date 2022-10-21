@@ -7,3 +7,4 @@
 7. cat el_quijote.txt | head -c4
 8. cat el_quijote.txt | head -c4000
 9. cat -n el_quijote.txt | tail -n+14 | head -n12
+10. sort -fr el_quijote.txt
