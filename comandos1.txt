@@ -1,40 +1,129 @@
-1. ls -l ./bin/ 
-2. ls -l ./tmp/ 
-3. ls -a ./etc/ | grep ^t | sort -rn
-4. ls ./dev/ | grep ^tty..$             
+1.	Llista tots els fitxers del directori bin.  
+
+    ls -l ./bin/ 
+
+2.	Llista tots els fitxers del directori tmp.  
+
+    ls -l ./tmp/ 
+
+3.	Llista tots els fitxers del directori etc que comencen amb t en ordre invers.  
+
+    ls -a ./etc/ | grep ^t | sort -rn
+
+4.	Llista tots els fitxers del directori dev que comencen amb tty i tenen 5 caràcters de llarg. 
+
+    ls ./dev/ | grep ^tty..$             
     ls -l /dev/tty??
-5. ls ./dev/ | grep ^tty*[1-4]$
-6. ls ./dev/ | grep ^t*C1$
-7. ls -a ../../
-8. ls -a ../../etc/ | grep -v ^t
-9. ls -R ../../usr/
 
+5.	Llista tots els fitxers del directori dev que comencen amb tty i acaben en 1,2,3 o 4.  
 
+    ls ./dev/ | grep ^tty*[1-4]$
 
-10. cd ../../tmp/
-11. pwd
-12. date
-13. cd ./home
-14. pwd
-15. ls -i ./home
-16. mkdir PRUEBA
-17.  mkdir -p dir1/dir11 dir2 dir3/dir31/dir311 dir3/dir31/dir312
+6.	Llista tots els fitxers del directori dev que comencen amb t i acaben en C1.  
+
+    ls ./dev/ | grep ^t*C1$
+
+7.	Llista tots els fitxers, inclosos els fitxers ocults, al directori arrel.  
+
+    ls -a ../../
+
+8.	Llista tots els fitxers del directori etc. que no comencen per t.  
+
+    ls -a ../../etc/ | grep -v ^t
+
+9.	Llista tots els fitxers del directori usr i els seus subdirectoris.  
+
+    ls -R ../../usr/
+
+10.	Canvia al directori tmp.  
+
+    cd ../../tmp/
+
+11.	Comproveu que el directori actual ha canviat.  
+
+    pwd
+
+12.	Mostra el dia i l'hora actuals.  
+
+    date
+
+13.	Amb una única ordre, posiciona’t en el directori $HOME.  
+
+    cd ./home
+
+14.	Comprova que hi ets.  
+
+    pwd
+
+15.	Llista tots els fitxers del directori HOME mostrant el seu número d'inodo.  
+
+    ls -i ./home
+
+16.	Crear un directori PRUEBA 
+
+    mkdir PRUEBA
+
+17.	Creeu els directoris dir1, dir2 i dir3 al directori PRUEBA. Dins de dir1 creeu el directori dir11. Dins del directori dir3 creeu el directori dir31. 
+Dins del directori dir31, creeu els directoris dir311 i dir312.  
+
     mkdir -p PRUEBA/{dir1/dir11,dir2,dir3/dir31/{dir311,dir312}}
-18. cp ./../../../etc/hostname mensaje.txt 
-19. cp mensaje.txt dir1 | cp mensaje.txt dir2 | cp mensaje.txt dir3
-20. ls -R
+
+18.	Copieu el fitxer /etc/hostname a un fitxer anomenat mensaje del directori PRUEBA.  
+
+    cp ./../../../etc/hostname mensaje.txt 
+
+19.	Copia el mensaje a dir1, dir2 i dir3.  
+
+    cp mensaje.txt dir1 | cp mensaje.txt dir2 | cp mensaje.txt dir3
+
+20.	Comproveu l'exercici anterior amb una única ordre.  
+
+    ls -R
+
+========================================================
+
+1.	Quantes vegades apareix la paraula "quijote"? 
+
+    cat el_quijote.txt | grep -ic quijote
+
+2.	En quantes línies no apareix la paraula quijote? 
+
+    cat el_quijote.txt | grep -vic quijote
+
+3.	Cerqueu tots els fitxers on es troba la paraula quijote i compteu el nombre de línies en les que apareix 
+
+    grep -isrc quijote 
+
+4.	El mateix que l'exercici anterior però sense que apareguin els arxius on la paraula quijote no existeix 
+
+    grep -isrc quijote | grep -v :0$
+
+5.	Substitueix totes les ocurrències de "panza" per "barriga" (ordre sed) 
+
+    cat el_quijote.txt | sed 's/panza/barriga/g'
+
+6.	Idem però independent de majúscules i minúscules 
+
+    cat el_quijote.txt | sed 's/panza/barriga/gi'
+
+7.	Extreu els primers 4 caràcters del fitxer 
+
+    cat el_quijote.txt | head -c4
+
+8.	Extreu els primers 4000 caràcters del fitxer 
+
+    cat el_quijote.txt | head -c4000
+
+9.	Extracte de la línia 14 a 25 
+
+    cat -n el_quijote.txt | tail -n+14 | head -n12
+
+10.	Ordena les línies del fitxer descendent ignorant majúscules i minúscules
+
+    sort -fr el_quijote.txt
+
+11.	Integra aquesta branca en master.
+
+    git switch master - git merge quijote
 
 
-
-
-1. cat el_quijote.txt | grep -ic quijote
-2. cat el_quijote.txt | grep -vic quijote
-3. grep -isrc quijote 
-4. grep -isrc quijote | grep -v :0$
-5. cat el_quijote.txt | sed 's/panza/barriga/g' 
-6. cat el_quijote.txt | sed 's/panza/barriga/gi'
-7. cat el_quijote.txt | head -c4
-8. cat el_quijote.txt | head -c4000
-9. cat -n el_quijote.txt | tail -n+14 | head -n12
-10. sort -fr el_quijote.txt
-11. git switch master - git merge quijote
